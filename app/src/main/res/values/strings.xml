@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quick Call Back Notification</string>
+    <string name="permission_explanation">This app requires access to your phone calls to work. Please tap button to request permission.</string>
+    <string name="app_explanation">Quick call back notification will show when you receive a phone call.</string>
+</resources>
