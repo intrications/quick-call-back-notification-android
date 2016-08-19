@@ -46,13 +46,7 @@ class CallReceiver : PhonecallReceiver() {
         nm.notify(number.hashCode(), builder.build())
     }
 
-    override fun onOutgoingCallStarted(ctx: Context, number: String, start: Date) {
-    }
-
     override fun onIncomingCallEnded(ctx: Context, number: String, start: Date, end: Date) {
-    }
-
-    override fun onOutgoingCallEnded(ctx: Context, number: String, start: Date, end: Date) {
     }
 
     override fun onMissedCall(ctx: Context, number: String, start: Date) {

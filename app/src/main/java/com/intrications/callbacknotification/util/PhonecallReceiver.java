@@ -45,9 +45,9 @@ public abstract class PhonecallReceiver extends BroadcastReceiver {
 
     //Derived classes should override these to respond to specific events of interest
     protected void onIncomingCallStarted(Context ctx, String number, Date start){}
-    protected void onOutgoingCallStarted(Context ctx, String number, Date start){}
+//    protected void onOutgoingCallStarted(Context ctx, String number, Date start){}
     protected void onIncomingCallEnded(Context ctx, String number, Date start, Date end){}
-    protected void onOutgoingCallEnded(Context ctx, String number, Date start, Date end){}
+//    protected void onOutgoingCallEnded(Context ctx, String number, Date start, Date end){}
     protected void onMissedCall(Context ctx, String number, Date start){}
 
     //Deals with actual events
@@ -71,7 +71,7 @@ public abstract class PhonecallReceiver extends BroadcastReceiver {
                 if(lastState != TelephonyManager.CALL_STATE_RINGING){
                     isIncoming = false;
                     callStartTime = new Date();
-                    onOutgoingCallStarted(context, savedNumber, callStartTime);                     
+//                    onOutgoingCallStarted(context, savedNumber, callStartTime);
                 }
                 break;
             case TelephonyManager.CALL_STATE_IDLE:
@@ -84,7 +84,7 @@ public abstract class PhonecallReceiver extends BroadcastReceiver {
                     onIncomingCallEnded(context, savedNumber, callStartTime, new Date());                       
                 }
                 else{
-                    onOutgoingCallEnded(context, savedNumber, callStartTime, new Date());                                               
+//                    onOutgoingCallEnded(context, savedNumber, callStartTime, new Date());
                 }
                 break;
         }
